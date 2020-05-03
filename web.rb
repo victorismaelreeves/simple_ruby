@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'json'
+ require 'json'
 set :port, 9090
 get '/' do
   { name: 'Hello',
