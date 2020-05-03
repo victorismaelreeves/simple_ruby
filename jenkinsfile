@@ -4,12 +4,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'tar czvf example2.tar.gz *.rb'
+        sh 'tar czvf simple_ruby *.rb'
       }
     }
     stage('Publish') {
       steps {
-        archiveArtifacts 'example2.tar.gz'
+        archiveArtifacts 'simple_ruby.tar.gz'
       }
     }
 }
