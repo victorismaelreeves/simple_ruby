@@ -1,0 +1,17 @@
+
+pipeline {
+  agent any
+
+  stages {
+    stage('Build') {
+      steps {
+        sh 'tar czvf simple_ruby *.rb'
+      }
+    }
+    stage('Publish') {
+      steps {
+        archiveArtifacts 'simple_ruby.tar.gz'
+      }
+    }
+}
+}
