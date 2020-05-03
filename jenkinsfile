@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'tar czvf simple_ruby *.rb'
+        sh 'tar czvf simple_ruby.tar.gz *.rb'
       }
     }
     stage('Publish') {
